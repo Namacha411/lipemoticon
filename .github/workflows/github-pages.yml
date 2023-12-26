@@ -23,9 +23,9 @@ jobs:
       - name: Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.0'
-          channel: 'master'
-          cache: true
+          flutter-version: '3.16.5'
+          channel: 'stable'
+          cache: false
       - run: flutter --version
       - run: flutter pub get
       - run: flutter build web --web-renderer html --base-href /${{ steps.version.outputs.repository }}/
